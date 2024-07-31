@@ -18,12 +18,18 @@ export default function BookCreatePage() {
       author: "",
       year: 2024,
       is_published: false,
+      description: "",
+      synopsis: "",
+      category: ""
     },
 
     validate: {
-      title: isNotEmpty("กรุณาระบุชื่อหนังสือ"),
-      author: isNotEmpty("กรุณาระบุชื่อผู้แต่ง"),
-      year: isNotEmpty("กรุณาระบุปีที่พิมพ์หนังสือ"),
+      title: isNotEmpty("ฉันจะเรียกหนังสือเล่มนี้ว่าอะไรดีเนี่ย"),
+      author: isNotEmpty("พระเจ้าช่วยหนังสือเล่มนี้ใครแต่งกัน!!!"),
+      year: isNotEmpty("ฉันว่าหนังสือเล่มนี้ต้องมาจากอนาคตแน่เลยล่ะ"),
+      description: isNotEmpty("อธิบายหน่อยก็ได้นะพวก"),
+      synopsis: isNotEmpty("เห้ยบอกมาหน่อยเห้ย"),
+      category: isNotEmpty("เอาล่ะได้เวลาเข้าสู่หมวดขยะแล้วล่ะ")
     },
   });
 
@@ -90,11 +96,21 @@ export default function BookCreatePage() {
               max={new Date().getFullYear() + 1}
               {...bookCreateForm.getInputProps("year")}
             />
-
-            {/* TODO: เพิ่มรายละเอียดหนังสือ */}
-            {/* TODO: เพิ่มเรื่องย่อ */}
-            {/* TODO: เพิ่มหมวดหมู่(s) */}
-
+            <TextInput
+              label= "รายละเอียดหนังสือ"
+              placeholder="รายละเอียดหนังสือ"
+              {...bookCreateForm.getInputProps("description")}
+            />
+            <TextInput
+              label= "เรื่องย่อ"
+              placeholder="เรื่องย่อ"
+              {...bookCreateForm.getInputProps("synopsis")}
+            />
+            <TextInput
+              label = "หมวดหมู่"
+              placeholder="หมวดหมู่"
+              {...bookCreateForm.getInputProps("category",)}
+            />
             <Checkbox
               label="เผยแพร่"
               {...bookCreateForm.getInputProps("is_published", {

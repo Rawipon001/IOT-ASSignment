@@ -1,6 +1,5 @@
 import Layout from "../components/layout";
 import cafeBackgroundImage from "../assets/images/bg-cafe-1.jpg";
-import ajPanwitImage from "../assets/images/aj-panwit.jpg";
 import coffeeImage from "../assets/images/coffee-1.jpg";
 
 export default function HomePage() {
@@ -12,38 +11,29 @@ export default function HomePage() {
           backgroundImage: `url(${cafeBackgroundImage})`,
         }}
       >
-        <h1 className="text-5xl mb-2">ยินดีต้อนรับสู่ IoT Library & Cafe</h1>
-        <h2>ร้านกาแฟที่มีหนังสืออยู่นิดหน่อยให้คุณได้อ่าน</h2>
+        <h1 className="text-5xl mb-2">ว่าไงเพื่อนๆ ยินดีต้อนรับนะได้เวลาเข้าสู่เว็บไก่ๆของเราแล้วแหละ</h1>
       </section>
 
       <section className="container mx-auto py-8">
-        <h1>เกี่ยวกับเรา</h1>
+        <h1>ได้เวลาเตรียมตัวแล้วแหละ</h1>
 
         <div className="grid grid-cols-3 gap-4">
           <p className="text-left col-span-2">
-            IoT Library & Cafe เป็นร้านกาแฟที่มีหนังสืออยู่นิดหน่อยให้คุณได้อ่าน
-            และเรียนรู้เรื่องใหม่ๆ ที่เกี่ยวกับเทคโนโลยี IoT โดยคาเฟ่ของเรานั้น ก่อตั้งขึ้นโดย
-            ผศ.ดร. ปานวิทย์ ธุวะนุติ ซึ่งเป็นอาจารย์ในวิชา Internet of Things และนายกฤตณัฏฐ์
-            ศิริพรนพคุณ เป็นผู้ช่วยสอนในหัวข้อ FastAPI และ React ในวิชานี้
+          เอาล่ะได้เวลาเข้าสู่คาเฟ่ของเราแหละ เตรียมตัวเตรียมใจให้พร้อมได้เวลาได้เจอกับประสบการ์ณของเว็บไก่ๆกุ๊กๆแล้วแหละ
           </p>
 
-          <div>
-            <img src={ajPanwitImage} alt="Panwit Tuwanut" className="h-full w-full object-cover" />
-          </div>
         </div>
         <p className="text-right mt-8">
-          ปัจจุบันค่าเฟ่ และห้องสมุดของเรา อยู่ในช่วงการดูแลของ ....
-          {/* TODO: ชื่อของตนเอง, รหัสประจำตัวนักศึกษา และแนะนำคาเฟ่นี้ต่ออีกสักหน่อย + ใส่รูปของตนเอง (ไม่จำเป็นหากไม่สะดวกใจใส่รูป) */}
-          ซึ่งมีบริการ... Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
-          placeat sit ea sapiente officia sunt cumque impedit, reiciendis quis eius asperiores!
-          Minus, mollitia? Vitae inventore odio quod ducimus similique, expedita sequi, reiciendis
-          rem recusandae impedit voluptatibus quo veritatis ut quis et suscipit? Eligendi, neque!
-          Earum quaerat unde similique totam. Pariatur!
+          ปัจจุบันคาเฟ่และเว็บนี้ที่ไก่จัดและหนังสือทุกเล่นฉัน นายรวิพล สอาดโพธิ์ทอง 65070197 เป็นคนดูแลเองแหละ
+          ซึ่งมีบริการการสั่งกาแฟสุดเฟี้ยวที่คุณกินแล้วถ่ายคล่องแน่นอนแต่ที่สำคัญคือสมมุติว่าคุณที่เป็นลูกค้าแล้วอยู่ดีๆอยากเป็นพนักงานขึ้นมา
+          คุณก็สามารถเปลี่ยนเสื้อผ้าที่หลังร้านแล้วเข้าระบบพนักงานได้เลยถ้าคุณเงินไม่พอจ่ายโดยที่คุณไม่ต้องเข้ารหัสเลยด้วยซ้ำ
+          และถ้าคุณตายังไม่แข็งพอคุณสามารถสั่งออเดอร์เครื่องดื่มได้แบบเต็มที่โดยที่ราคามันอาจจะซื้อแลมโบกินี่ได้เลยด้วยซ้ำแตคุณกลับมาซื้อกาแฟ
+          ราคาเครื่องดื่มก็ถือว่าราคานักศึกษา (แลกเปลี่ยน)
         </p>
       </section>
 
-      <section className="w-full flex justify-center">
-        <img src={coffeeImage} alt="Coffee" className="w-full" />
+      <section className="w-100px flex justify-center">
+        <img src={coffeeImage} alt="Coffee" className="w-100px" />
       </section>
     </Layout>
   );
