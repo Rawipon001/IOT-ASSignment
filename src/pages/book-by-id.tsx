@@ -1,6 +1,6 @@
 import { Alert, Badge, Button, Container, Divider } from "@mantine/core";
 import Layout from "../components/layout";
-import { useParams } from "react-router-dom";
+import {useParams } from "react-router-dom";
 import { Book } from "../lib/models";
 import useSWR from "swr";
 import Loading from "../components/loading";
