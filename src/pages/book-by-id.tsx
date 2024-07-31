@@ -1,6 +1,6 @@
 import { Alert, Badge, Button, Container, Divider } from "@mantine/core";
 import Layout from "../components/layout";
-import {useParams } from "react-router-dom";
+import {Link,useParams } from "react-router-dom";
 import { Book } from "../lib/models";
 import useSWR from "swr";
 import Loading from "../components/loading";
@@ -60,11 +60,12 @@ export default function BookByIdPage() {
               <Button
                 color="blue"
                 size="xs"
-                onClick={() => setIsOrderFormOpen(true)} // Open the order form modal
+                component={Link}
+                to={`/books/${bookId}/edit`}
                 className="mt-4"
                 leftSection={<IconEdit />}
               >
-                สั่งอาหาร
+                แก้ไขข้อมูลหนังสือ
               </Button>
             </>
           )}

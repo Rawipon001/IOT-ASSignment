@@ -4,10 +4,9 @@ import { Orders } from "../lib/models"; // แน่ใจว่า `Orders` ถ
 import Loading from "../components/loading";
 import { Alert, Button } from "@mantine/core";
 import { IconAlertTriangleFilled } from "@tabler/icons-react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function OrdersPage() {
-  const { menuID } = useParams<{ menuID: string }>();
   const { data: orders, error } = useSWR<Orders[]>(`/orders`);
 
   return (
@@ -37,7 +36,7 @@ export default function OrdersPage() {
               <div className="border border-solid border-neutral-200 p-4" key={order.id}>
                 <h2 className="text-lg font-semibold">Order ID: {order.id}</h2>
                 <h2>{order.menu_name}</h2>
-                <img src={order.menu_image} />
+                <img src={order.menu_Image} />
                 <p>จำนวน: {order.quantity}</p>
                 <p>หมายเหตุ: {order.notes}</p>
               </div>
